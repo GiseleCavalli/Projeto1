@@ -1,0 +1,264 @@
+:root{
+    --bege: #f5ebe5;
+    --marrom: #625240;
+    --verde: #9fccc3;
+
+    --montserrat: 'Montserrat', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+    background-color: var(--bege);
+    color: var(--marrom); 
+    font-family: var(--montserrat);
+}
+
+h2{
+    font-size: 1.7rem;
+    color: var(--verde);
+    font-weight: bold;
+    text-align: center;
+    margin: 0 0 1em 0;
+}
+
+.section{
+    padding: 3em 0;
+    margin: 0 auto;
+}
+
+/* Cabeçalho */
+header {
+    background-color: var(--marrom);
+    color: var(--bege);
+    padding: 0 6% 0 6%;
+}
+
+.container{
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    flex-direction: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0.75rem 0 0.75rem 0 ;
+}
+
+.logo {
+    width: 150px;
+    margin: 0 1rem 0 1.5rem;
+}
+
+.menu {
+    text-align: center;
+} 
+
+.menu nav a{
+    color: var(--bege);
+    text-decoration: none;
+    padding-right: 40px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    margin: 0 0.7rem 1.0rem 0.7rem;
+}
+
+.menu nav a:hover{
+    color: var(--verde);
+}
+
+.menu nav a::after{
+    content: " ";
+    width: 0px;
+    height: 4px;
+    background-color: var(--verde);
+    position: absolute;
+    top: 30px;
+    left: 0;
+    transition: width 0.5s;
+}
+
+.menu nav a:hover::after{
+    width: 30px;
+}
+
+/* Body*/
+
+/* Sobre */
+.image{
+    width: 170px;
+    float: left;
+    border-radius: 50%;
+    margin: 0 50px 20px 5rem;
+}
+
+.about-text{
+    font-size: 1.3rem;
+    text-align: left;
+    padding: 1rem 10px;
+    text-indent: 2.4rem;
+}
+
+.about-text::first-letter{
+    text-transform: uppercase;
+}
+
+/* Experiência */
+.experience-text{
+    font-size: 1.3rem;
+    text-align: left;
+    padding: 1rem 5rem 1rem 5rem;
+    text-indent: 2rem;
+}
+
+.experience-text::first-letter{
+    text-transform: uppercase;
+}
+
+/* Git */
+.div{
+    text-align: center;
+}
+
+.contato-text{
+    font-size: 1.35rem;
+    text-align: center;
+    padding: 1rem 5rem 0 1rem;
+}
+
+.contato-email{
+    font-size: 1.35rem;
+    text-align: center;
+    padding: 1rem 1rem;
+}
+
+.contato-text::first-letter{
+    text-transform: uppercase;
+}
+
+.contato{
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--marrom);
+    font-weight: bold;
+    padding: 0 15px 10% 0;
+    text-align: center;    
+}
+
+/* Responsividade */
+@media screen and (min-width: 280px) and (max-width: 359px) {
+    /* Cabeçalho */
+    header{
+        padding: 5px 0 5px 0;
+    }
+
+    .container{
+        flex-direction: column;
+    }
+
+    .logo {
+        width: 90px;
+        margin-bottom: 1rem;
+    }    
+
+    .menu nav a{
+        font-size: 1.15rem;
+    }
+
+    /* Body */
+    .image{
+        width: 110px;
+        margin: 0 20px 20px 30%;
+        justify-content: center;
+    }
+
+    .about-text{
+        text-align: center;
+        align-items: center;
+    }
+
+    /* Experiência */
+    .experience-text{
+        text-align: center;
+        align-items: center;
+        padding: 0 15px;
+    }
+
+    /* Contato */
+    .contato-email{
+        font-size: 1.1rem;
+        padding: 1rem 0;
+    }
+    
+}
+
+@media screen and (min-width: 360px) and (max-width: 768px) {
+    /* Cabeçalho */
+    header{
+        width: auto;
+        padding: 7px 0 5px 0;
+    }
+
+    .container{
+        flex-direction: column;
+    }
+    
+    .logo {
+        width: 105px;
+        margin-bottom: 1.2rem;
+    }
+
+    .menu nav a{
+        font-size: 1.28rem;
+    }
+ 
+    /* Body */
+    .image{
+        width: 135px;
+        margin: 0 20px 20px 30px;
+        justify-content: center;
+    }
+
+    .about-text{
+        text-align: center;
+        align-items: center;
+    }
+
+    /* Experiência */
+    .experience-text{
+        text-align: center;
+        align-items: center;
+        padding: 0 25px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* Cabeçalho */
+    .logo {
+        width: 130px;
+    }
+
+    .menu nav a{
+        font-size: 1.5rem;
+    }
+    
+    /* Body */
+    .image{
+        margin: 0 20px 0 5%;
+    }
+
+    .about-text{
+        text-align: center;
+        align-items: center;
+        padding-left: 10px;
+    }
+
+    /* Experiência */
+    .experience-text{
+        text-align: center;
+        align-items: center;
+        padding: 0 35px;
+    }
+}
