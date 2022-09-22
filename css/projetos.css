@@ -1,124 +1,44 @@
 
-.recipiente{
-    margin: auto;
-    width: 90%;
+#items-carousel{
+    width: 100vw;
 }
 
-/* Título */
-.title-projects h3 {
-    color: var(--marrom);
-    font-size: 1.5rem;
-    font-family: var(--montserrat);
-    margin-bottom: 5px 0 5px 20px;
-}
-
-/* Conteúdo principal e flechas*/
-.projects .indicador-principal{
+#items{
     display: flex;
-    align-items: center;
-    position: relative;
-}
-
-.projects .indicador-principal .flecha-esquerda,
-.projects .indicador-principal .flecha-direita{
-    position: absolute;
-    background: rgba(0, 0, 0, 0.62);
-    height: 25%;
-    top: calc(100% - 65%);
-    width: 50px;
-    cursor: pointer;
-    transition: .2s ease all;
-    opacity: 45%;
-    padding-left: 0;
-    border: none;
-}
-
-.projects .indicador-principal .flecha-esquerda:hover,
-.projects .indicador-principal .flecha-direita:hover{
-    background: rgb(0, 0, 0);
-}
-
-.projects .indicador-principal .flecha-esquerda{
-    left: 0;
-}
-
-.projects .indicador-principal .flecha-direita{
-    right: 0;
-}
-
-/* Carrossel */
-.projects .conteudo-carrossel{
-    width: 100%;
-    padding: 20px 0;
-    overflow: hidden;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
 }
 
-.projects .conteudo-carrossel .carrossel {
-    display: flex;
-    flex-wrap: nowrap;
-}
-
-.projects .conteudo-carrossel .carrossel .imagens{
-    min-width: 20%;
-    transition: .3s ease all;
-    box-shadow: 5px 5px 10px #0000004d;
-}
-
-.projects .conteudo-carrossel .carrossel .imagens:hover {
-    transform: scale(1.1);
-    transform-origin: center;
-}
-
-.projects .conteudo-carrossel .carrossel .imagens img {
+.item{
+    flex: none;
     width: 100%;
-    height: 480px;
-    vertical-align: top;
+    height: 100%;
+    scroll-snap-align: start;
+    pointer-events: none;
+    margin: 0 auto;
+
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-@keyframes modal {
-    from{
-        opacity: 0;
-        transform: translate3d(0, -60px, 0);
-    }
-    to{
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-    }
+img{
+    width: 30%;
+    object-fit: cover;
 }
 
-.modal-content  {
-    animation: modal .3s;
+::-webkit-scrollbar-track {
+    background-color: var(--bege);
 }
-
-
-/* Responsividade*/
-
-@media screen and (max-width: 800px) {
-    .projects .conteudo-carrossel {
-        overflow: visible;
-    }
-
-    .projects .conteudo-carrossel .carrossel {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-    }
-
-    .projects .recipiente,
-    .projects .flecha-esquerda,
-    .projects .flecha-direita {
-        display: none;
-    }
-
-    .modal-content {
-        width:70%;
-        height:80%;
-    }
-    .ficha-tecnica{
-        width:100%;
-    }
-    .enredo{
-        width:100%;
-    }
+::-webkit-scrollbar {
+    width: 6px;
+    background: var(--bege);
+}
+::-webkit-scrollbar-thumb {
+    background: #dad7d7;
+    border-radius: 8px;
 }
