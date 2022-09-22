@@ -23,8 +23,8 @@
 .projects .indicador-principal .flecha-direita{
     position: absolute;
     background: rgba(0, 0, 0, 0.62);
-    height: 130%;
-    top: calc(50% - 25%);
+    height: 25%;
+    top: calc(100% - 65%);
     width: 50px;
     cursor: pointer;
     transition: .2s ease all;
