@@ -34,11 +34,33 @@ img{
 ::-webkit-scrollbar-track {
     background-color: var(--bege);
 }
+
 ::-webkit-scrollbar {
     width: 6px;
     background: var(--bege);
 }
+
 ::-webkit-scrollbar-thumb {
     background: #dad7d7;
     border-radius: 8px;
+}
+
+
+/* Responsividade */
+@media screen and (min-width: 280px) and (max-width: 359px) {
+    img{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 360px) and (max-width: 768px) {
+    img{
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    img{
+        width: 45%;
+    }
 }
